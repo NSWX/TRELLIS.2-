@@ -159,4 +159,24 @@ python example.py
    - **原因**: 历史编译失败遗留的 C++ 源码占用了缓存。
    - **解法**: 执行 `. ./setup.sh` 前必须手动清空 `rm -rf /tmp/extensions/`。
 
-   
+## ⚖️ 许可与开源合规 (License)
+
+本工程主干代码与预训练权重受 **MIT License** 保护。 *注意：部分三维渲染及材质重建底层依赖库受独立协议约束：*
+
+- **nvdiffrast**: 遵循其独立的使用许可（用于 PBR 渲染验证）。
+- **nvdiffrec**: 遵循其独立的使用许可（用于 split-sum PBR 材质解析）。
+
+## 📚 参考文献 (Citation)
+
+本工程中引用的核心三维生成架构与 O-Voxel 稀疏表达机制源于 TRELLIS.2 预研项目。若本离线化部署代码及对应算法在学术论文、three-dimensional Gaussian splatting 对比实验或开源仓库中被使用，请务必严格引用以下文献：
+
+Code snippet
+
+```
+@article{xiang2025trellis2,
+    title={Native and Compact Structured Latents for 3D Generation},
+    author={Xiang, Jianfeng and Chen, Xiaoxue and Xu, Sicheng and Wang, Ruicheng and Lv, Zelong and Deng, Yu and Zhu, Hongyuan and Dong, Yue and Zhao, Hao and Yuan, Nicholas Jing and Yang, Jiaolong},
+    journal={Tech report},
+    year={2025}
+}
+```
